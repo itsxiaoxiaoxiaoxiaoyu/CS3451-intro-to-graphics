@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+        "module": "amd",
+		"target": "ES5",
+		"noImplicitAny": false,
+		"preserveConstEnums":true,
+		"outDir": "js",
+		"sourceMap": true,
+		"watch": true
+	},
+	"files": [
+		"a5.ts",
+		"loader.ts"
+	]
+}

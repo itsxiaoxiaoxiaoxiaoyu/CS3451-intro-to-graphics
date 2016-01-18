@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--<meta charset="utf-8">-->
+		<title>Happy Holiday!</title>
+		<p>&nbsp;&nbsp;&nbsp;By Xiaoyu Yuan</p>
+		<p>&nbsp;&nbsp;&nbsp;Type any letters you want! And press enter to clear them all! There are at most 15 letters shown at once!</p>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100%; color: #000}
+			canvas.hidden {width: 100%; height: 100%; display: none}
+		</style>
+		
+		<script src="resources/webgl-utils.js"></script>
+		<script src="resources/gl-matrix.js"></script>
+		<script src="resources/chroma.js"></script>
+		<script src="resources/Stats.js"></script>
+		<script src="resources/howler.js"></script>
+	</head>
+	<body>
+		<canvas id="webgl"></canvas>
+		<script data-main="js/a5" type="text/javascript" src="resources/require.js"></script>
+		<p style = "color:grey;font-size:200%">&nbsp;&nbsp;&nbsp;Instruction</p>
+		<p style = "color:grey">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generally, I did not have any access to webpage in US from China, my hometown,
+			so I did this assignment in webGL shaders instead of any higher-level librabies</p>
+
+		<p style = "color:grey">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;part1: The message taken from the keyboad is detected by mouseevent method of 
+			canvas. I only included 26 letters all in upper case. Also a space can be typed in but with just literally space between letters. I used an array to store the letters detected from the keyboard. Once the maximum capacity is reached, the array will be shifted so that the first letter would be removed. The position of each letters is calculated based on the total number of letters stored in array. Each letter has its own uniforms, including colorMult, angles and height. All are obtained randomly. The textures of letters are stored in folder "letters" with corresponding ID. A frag shader is used to take that shader picture. In addition, a horizontal position is used to record the distance towards the center of the canvas of each letter element. The horizontal position is based on the length of the letter array. The more the letters in the array, the further the first and last letter deviated from the center. After calculate the properties of each letter in the letter array, I pass that array into render part. There are calculation of the transformation according to previous assignment in the render part for every letter. The shader takes the color of base color, and set those in textures to be white.</p>		
+		<p style = "color:grey">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;part1.5: The string is taken by the height of each letter and a shader to discard the strings below that height.</p>
+			<p style = "color:grey">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;part2: When the user clicked each letter, I used a mousedown event to detect the mouse position. Compare the x of mouse position with the horizontal position of each letter to decide if the mouse is click on certain letter. In order to do that, I traverse the array and find the closest distance from the mouse position recorded and letter position. The letter with closest distance should be the letter currently clicked. Now notice on other properties of each letter element, 
+				isSpinning: the boolean value to record the state of whether spinning, the spinning speed, time: the number of time to spin, spinning angle to record the current angle of rotating in Y-axis. When the letter is clicked, it first be denoted as isSpinning, then generate the number of time to spin. The further the click from the center of the letter, the more time the letter needs to spin. The Spinning speed is first determined by time, then decreases to its half. The letter would rotate for 360 in every spinning speed. The property spinning angle to record the current rotation in 360 for each letter. Once the letter spin enough time or the speed decreases to too low, the letter won't spin any more.</p>
+
+		<p style = "color:grey">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;part3: I used the howler.js for playing sound. So, TAs please do install howl before running.</p>
+	</body>
+</html>

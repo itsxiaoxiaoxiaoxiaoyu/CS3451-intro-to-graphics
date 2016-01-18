@@ -1,0 +1,49 @@
+section, footer, nav {
+  display: block;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  -webkit-text-size-adjust: none;
+  color: #333;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+a {
+  color: blue;
+  color: hsl( 220, 90%, 40% );
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: blue;
+  background-color: hsl( 220, 90%, 50% );
+  color: white;
+}
+
+footer {
+  border-top: 1px solid #CCC;
+  font-size: 0.8em;
+  position: relative;
+  z-index: 100;
+}
+
+#disclaimer {
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+.no-csstransforms3d #disclaimer { display: block; }
+
+hr {
+  border: none;
+  border-top: 1px solid #CCC;
+}
+
+#webgl {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #CCC;
+  margin: 0 auto 60px;
+}

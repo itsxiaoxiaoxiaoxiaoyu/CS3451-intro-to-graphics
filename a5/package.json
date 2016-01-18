@@ -1,0 +1,21 @@
+{
+  "name": "a5",
+  "version": "1.0.0",
+  "description": "Shaders!",
+  "main": "a5.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-typescript": "^2.8.0",
+    "merge2": "^0.3.6",
+    "gulp-livereload": "^3.8.1",
+    "http": "0.0.0",
+    "st": "^1.0.0"
+  },
+  "scripts": {},
+  "author": "Blair MacIntyre",
+  "license": "MIT"
+}

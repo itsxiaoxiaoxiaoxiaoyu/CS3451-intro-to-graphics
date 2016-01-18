@@ -1,0 +1,19 @@
+{
+  "name": "a1",
+  "version": "1.0.1",
+  "description": "The Typescript Raytracer sample, with additions",
+  "main": "raytracer.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-typescript": "^2.8.0",
+    "merge2": "^0.3.6"
+  },
+  "scripts": {},
+  "author": "Typescript developers and Blair MacIntyre",
+  "license": "MIT"
+}
